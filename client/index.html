@@ -1,0 +1,59 @@
+<head>
+  <title>resistToday</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+
+<body>
+<script src="main.js"></script>
+  <nav>
+    {{> navBar}}
+  </nav>
+  <main>
+    <div id = "signin">
+      {{> loginButtons}}
+    </div>
+    <h1>Resist Today</h1>
+    <p id = "title"> Our Mission: </p>
+    <div id = "words">
+    <p>Resist Today is a website that was created on July 16, 2018. The three founders, Irina, Gabrielle, and Gabriella, wanted to create a place where activists could organize protests.</p>
+    <p>In our time, we have seen our elected officials fail us. We wanted to provide a platform where people could take change into their own hands, from abortion rights to gun laws. We would like to give everybody the ability to <b>resist</b>.</p> 
+    </div>
+    <div id = "protest"> </div>
+    <ul id="allProtests">
+      {{#each todos}}
+        {{> info}}
+      {{/each}}
+  </ul>
+  <div id='signedProtests'> </div>
+  </main>
+</body>
+
+<template name="info">
+  <button class="delete">&times;</button>
+  <li class ="{{location}} protestItem">Protest in {{location}} on {{date}} for {{cause}}</li>
+</template>
+<template name="navBar">
+  <div class = "button" type = "button"  onclick="location.href='main.html'">Home</div>
+  <div class = "button" id="about" type = "button" >About</div>
+  <div class = "button" id="find" type = "button">Find A Protest</div>
+  <div class = "button" id="organize" type = "button">Organizing</div>  
+  <div class = "button" id="donate" type = "button">Donate</div>
+  {{#if currentUser}}
+  <div class = "button" id="account" type = "button">My Account</div>
+  {{/if}}
+</template>
+
+<template name="newform">
+  Please sign in to be able to create your own protest.
+  {{#if currentUser}}
+  <header>
+    <form class="protests">
+      <input type="text" class="date" placeholder="enter the date" />
+      <input type="text" class="location" placeholder="enter the borough" />
+      <input type="text" class="cause" placeholder="enter the cause" />
+      <button class = "fancyButton" type="submit"> Create </button>
+    </form>
+  </header>
+  {{/if}}
+</template>
+

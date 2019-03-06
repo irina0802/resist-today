@@ -1,0 +1,89 @@
+nav{
+	float:left;
+	background-color: grey;
+	height: 100%;
+	position: fixed;
+	width: 20%;
+	margin: none;
+	padding: none;
+}
+
+.button{
+	height: 50px;
+	width: 100%;
+	background-color: grey;
+	border: none;
+	margin: 20px auto;
+	font-size: 18px;
+	color: white;
+	text-align: center;
+}
+
+.button:hover{
+	color: blue;
+}
+
+#title{
+	font-size: 14px;
+}
+
+main{
+	float: right;
+	width: 80%;
+	background-image: url("womensmarch.jpg");
+	height: 100vh;
+	opacity: 1;
+}
+
+body{
+	margin: 0;
+	padding: 0;
+
+}
+
+h1{
+	text-align: center;
+	font-family: Impact;
+	font-size: 50px;
+	margin-right: 40px;
+}
+
+#words{
+	font-size: 12px;
+}
+
+#signin{
+	float: left;
+	width: 70px;
+	height: 25px;
+	margin-left: 20px;
+}
+
+#allProtests{
+	display:none;
+}
+
+#signedProtests{
+	display:none;
+}
+
+.fancyButton {
+	display: block;
+    width: 100%;
+    border: none;
+    background-color: gray;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 20px;
+    text-align: center;
+}
+
+#title{
+	font-size: 25px;
+}
+
+#words{
+	font-size: 14px;
+	font-weight:bold
+}
